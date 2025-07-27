@@ -1,22 +1,19 @@
-// script.js
 
-// Dark mode toggle
-document.getElementById("theme-toggle").addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-});
+    const skills = document.querySelectorAll('.skill');
+    const descriptionBox = document.getElementById('skill-description');
 
-// Smooth scroll to section
-document.querySelectorAll("a[href^='#']").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    document.querySelector(link.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+    skills.forEach(skill => {
+      skill.addEventListener('mouseover', () => {
+        const desc = skill.getAttribute('data-description');
+        descriptionBox.textContent = desc;
+        descriptionBox.classList.add('show');
+        skill.style.backgroundColor = '#a5b4fc';
+      });
+
+      skill.addEventListener('mouseout', () => {
+        descriptionBox.textContent = '';
+        descriptionBox.classList.remove('show');
+        skill.style.backgroundColor = '#e0f2fe';
+      });
     });
-  });
-});
-
-// Contact form handler
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thanks for your message! I'll get back to you soon.");
-});
+  
