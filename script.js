@@ -1,50 +1,22 @@
-/* style.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+// script.js
 
-header {
-  background: #282c34;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
+// Dark Mode Toggle
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
+// Contact Form Submission
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Thank you! I'll reach out soon.");
+});
 
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 2rem;
-}
-
-.project-card {
-  background: #f0f0f0;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 5px;
-}
-
-/* 🔄 Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  body {
-    padding: 0 1rem;
-  }
-}
+// Smooth Scroll Navigation
+document.querySelectorAll("nav a[href^='#']").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
