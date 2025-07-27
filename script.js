@@ -1,22 +1,22 @@
 // script.js
 
-// Dark Mode Toggle
+// Dark mode toggle
 document.getElementById("theme-toggle").addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
 
-// Contact Form Submission
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thank you! I'll reach out soon.");
-});
-
-// Smooth Scroll Navigation
-document.querySelectorAll("nav a[href^='#']").forEach(link => {
-  link.addEventListener("click", function (e) {
+// Smooth scroll to section
+document.querySelectorAll("a[href^='#']").forEach(link => {
+  link.addEventListener("click", e => {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
+    document.querySelector(link.getAttribute("href")).scrollIntoView({
       behavior: "smooth"
     });
   });
+});
+
+// Contact form handler
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Thanks for your message! I'll get back to you soon.");
 });
