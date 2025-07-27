@@ -1,52 +1,83 @@
-<!DOCTYPE html>
+
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akansha's Portfolio</title>
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Hi, I'm [Your Name]</h1>
+    <h1>Akansha's Portfolio</h1>
     <nav>
       <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About Me</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#academic">Academic</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌗</button></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <img src="project1.jpg" alt="Project 1 screenshot showing layout and design" />
-      <img src="project2.jpg" alt="Project 2 showcasing mobile responsiveness" />
-    </section>
-
     <section id="about">
       <h2>About Me</h2>
-      <p>I'm a passionate web developer who brings ideas to life through clean code and stunning design.</p>
+      <p>I'm Akansha Jaiswal, a creative and driven developer with a passion for clean, accessible design and meaningful user experiences. I enjoy working with modern web technologies and building beautiful responsive applications.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li class="skill" data-description="Expertise in semantic HTML5 elements and structure.">HTML</li>
+        <li class="skill" data-description="Advanced CSS with Flexbox, Grid, and transitions.">CSS</li>
+        <li class="skill" data-description="JavaScript ES6+, DOM manipulation, event handling.">JavaScript</li>
+        <li class="skill" data-description="C# programming for object-oriented and enterprise apps.">C#</li>
+        <li class="skill" data-description="C++ for high-performance applications and problem solving.">C++</li>
+        <li class="skill" data-description="SQL queries for relational databases and data management.">SQL</li>
+        <li class="skill" data-description="Understanding of DBMS concepts, indexing, and normalization.">DBMS</li>
+      </ul>
+      <p id="skill-description"></p>
+    </section>
+
+    <section id="academic">
+      <h2>Academic Background</h2>
+      <ul>
+        <li>Bachelor's in computer application – XYZ University (2023–2026)</li>
+        <li>Senior Secondary – ABC School (2021–2023)</li>
+      </ul>
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Reading and blogging on tech topics</li>
+        <li>Sketching and digital art</li>
+        <li>Building mini web projects for fun</li>
+      </ul>
     </section>
 
     <section id="contact">
       <h2>Contact Me</h2>
-      <form id="contactForm">
-        <label for="email">Email Address</label>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
         <input type="email" id="email" name="email" required />
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
         <button type="submit">Send</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    <p>&copy; 2025 Akansha. Crafted with care and code 💻</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
